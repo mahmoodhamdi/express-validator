@@ -202,7 +202,7 @@ The value returned by the function will become the new value of the field.
 app.post('/object/:id', param('id').customSanitizer((value, { req }) => {
   // In this app, users have MongoDB style object IDs, everything else, numbers
   return req.query.type === 'user' ? ObjectId(value) : Number(value);
-})), (req, res) => {
+}), (req, res) => {
   // Handle request
 });
 ```
@@ -413,13 +413,13 @@ no matter where it happens in the chain.
 For example, there are no differences between this:
 
 ```ts
-body('json_string').isLength({ max: 100 }).isJSON().optional().
+body('json_string').isLength({ max: 100 }).isJSON().optional();
 ```
 
 and this:
 
 ```ts
-body('json_string').optional().isLength({ max: 100 }).isJSON().
+body('json_string').optional().isLength({ max: 100 }).isJSON();
 ```
 
 :::
