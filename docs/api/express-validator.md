@@ -120,6 +120,16 @@ Same as [standalone `query()` function](./check.md#query), but returning a
 
 ### `.buildCheckFunction()`
 
+```ts
+buildCheckFunction(locations: Location[]): (
+  fields?: string | string[],
+  message?: FieldMessageFactory | ErrorMessage,
+) => CustomValidationChain<T>
+```
+
+Same as [standalone `buildCheckFunction()` function](./misc.md#buildcheckfunction), but returning a
+[`CustomValidationChain`](#customvalidationchain) for that `ExpressValidator` instance.
+
 ### `.checkExact()`
 
 Same as [standalone `checkExact()` function](./check-exact.md#checkexact).
