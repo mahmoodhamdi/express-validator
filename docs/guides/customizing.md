@@ -143,7 +143,7 @@ body('json_string', 'Invalid json_string')
 
 ### Other error messages
 
-Some express-vaildator functions might create a different error type, and they offer a different way
+Some express-validator functions might create a different error type, and they offer a different way
 to specify an error message:
 
 - [`checkExact()`](../api/check-exact.md)

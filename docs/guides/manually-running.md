@@ -24,7 +24,7 @@ Check the examples below to understand how this method can help you:
 
 ```js
 const express = require('express');
-const { validationResult } = require('express-validator');
+const { body, validationResult } = require('express-validator');
 
 // can be reused by many routes
 const validate = validations => {
